@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class DispatchHours extends Model
 {
+    use CompanyDbConnection;
+
     /**
      * Indicates if the model should be timestamped.
      *
@@ -19,8 +22,6 @@ class DispatchHours extends Model
      * @var string
      */
     protected $table = 'Dispatch_Hours';
-
-    protected $connection = 'db_connection';
 
     /**
      * The attributes that are mass assignable.

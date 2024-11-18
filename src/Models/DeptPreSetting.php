@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class DeptPreSetting extends Model
 {
+    use CompanyDbConnection;
+
     // Specify the table name if it differs from the plural of the model name
     public $incrementing = true;
 
@@ -15,7 +18,7 @@ class DeptPreSetting extends Model
     protected $primaryKey = 'ID';
 
     // If the primary key is not auto-incrementing (set to true if it's an auto-incrementing integer)
-    protected $connection = 'db_connection'; // Change to false if it's a UUID or non-incrementing
+    // Change to false if it's a UUID or non-incrementing
 
     // Define the key type (set to 'int' or 'string' as per your primary key type)
     protected $keyType = 'int';

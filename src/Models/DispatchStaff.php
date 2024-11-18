@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class DispatchStaff extends Model
 {
+    use CompanyDbConnection;
+
     // Specify the table name if it doesn't follow Laravel's naming conventions
     public $timestamps = false;
 
@@ -14,8 +17,6 @@ class DispatchStaff extends Model
 
     // Disable automatic timestamp management since the table doesn't have 'created_at' and 'updated_at'
     protected $primaryKey = 'ID';
-
-    protected $connection = 'db_connection';
 
     // Define the columns that are mass assignable
     protected $fillable = [

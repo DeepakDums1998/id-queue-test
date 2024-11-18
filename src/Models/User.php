@@ -1,11 +1,13 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -24,7 +26,7 @@ class User extends Authenticatable
 
     protected $dates = ['account_pw_last_modified'];
 
-    protected $connection = 'db_connection'; // Disabling timestamps if not present in the table
+    // Disabling timestamps if not present in the table
 
     /**
      * The attributes that are mass assignable.
@@ -70,17 +72,17 @@ class User extends Authenticatable
         return $this->encrypt_password;
     }
 
-    public function staffStation()
+    public function staffStation(): HasOne
     {
         return $this->hasOne(StaffStation::class, 'Staff_GUID', 'GUID');
     }
 
-    public function dispatchBuilding()
+    public function dispatchBuilding(): BelongsTo
     {
         return $this->belongsTo(DispatchBuilding::class, 'Staff_Login_Location', 'id');
     }
 
-    public function getCheckInAtAttribute($value)
+    public function getCheckInAtAttribute($value): string
     {
         return Carbon::parse($value)->toDateTimeString();
     }

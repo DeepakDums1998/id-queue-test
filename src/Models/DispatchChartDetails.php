@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class DispatchChartDetails extends Model
 {
+    use CompanyDbConnection;
+
     public $incrementing = true;
 
     public $timestamps = false;
@@ -13,8 +16,6 @@ class DispatchChartDetails extends Model
     protected $table = 'Dispatch_Chart_Details';
 
     protected $primaryKey = 'ID';
-
-    protected $connection = 'db_connection';
 
     protected $fillable = [
         'Company_Dept_ID',

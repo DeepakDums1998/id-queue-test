@@ -1,18 +1,19 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class DispatchBuilding extends Model
 {
+    use CompanyDbConnection;
+
     public $timestamps = false;
 
     public $incrementing = false;
 
     protected $table = 'Dispatch_Building';
-
-    protected $connection = 'db_connection';
 
     protected $primaryKey = 'Building_GUID';
 

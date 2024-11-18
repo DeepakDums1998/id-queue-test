@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class StatusLog extends Model
 {
+    use CompanyDbConnection;
+
     // Specify the table name since it doesn't follow the default plural naming convention
     public $timestamps = false;
 
@@ -15,7 +18,6 @@ class StatusLog extends Model
     protected $primaryKey = 'Staff_GUID'; // Specify the database connection if needed
 
     // Disable automatic timestamp management if your table doesn't have 'created_at' and 'updated_at'
-    protected $connection = 'db_connection';
 
     // Set the columns that are mass assignable
     protected $fillable = [

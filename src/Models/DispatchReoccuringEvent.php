@@ -1,12 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 
 class DispatchReoccuringEvent extends Model
 {
+    use CompanyDbConnection;
     use HasUuids;
 
     public $incrementing = false;
@@ -16,8 +18,6 @@ class DispatchReoccuringEvent extends Model
     protected $table = 'Dispatch_Reoccuring_Events';
 
     protected $primaryKey = 'GUID';
-
-    protected $connection = 'db_connection';
 
     protected $fillable = [
         'ID',

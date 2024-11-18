@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class DispatchLocation extends Model
 {
+    use CompanyDbConnection;
+
     public $incrementing = false;
 
     public $timestamps = false;
@@ -13,8 +16,6 @@ class DispatchLocation extends Model
     protected $table = 'Dispatch_Location';
 
     protected $primaryKey = 'Location_GUID';
-
-    protected $connection = 'db_connection';
 
     protected $fillable = [
         'Location_GUID',

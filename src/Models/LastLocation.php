@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class LastLocation extends Model
 {
+    use CompanyDbConnection;
+
     public $timestamps = false;
 
     public $incrementing = false;  // No timestamps in the table
@@ -13,8 +16,6 @@ class LastLocation extends Model
     protected $table = 'Last_Location'; // No primary key defined
 
     protected $primaryKey = null; // Assumes the table doesn't use auto-incrementing primary key
-
-    protected $connection = 'db_connection';
 
     protected $fillable = [
         'Company_Dept_ID',

@@ -1,12 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 
 class DispatchService extends Model
 {
+    use CompanyDbConnection;
     use HasUuids;
 
     public $incrementing = false;
@@ -16,8 +18,6 @@ class DispatchService extends Model
     protected $table = 'Dispatch_Service';
 
     protected $primaryKey = 'ID';
-
-    protected $connection = 'db_connection';
 
     protected $fillable = [
         'ID',

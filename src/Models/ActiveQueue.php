@@ -1,18 +1,20 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class ActiveQueue extends Model
 {
+    use CompanyDbConnection;
+
     // Specify the table name since it doesn't follow the default plural naming convention
     public $timestamps = false;
 
     protected $table = 'Dispatch_Chart_Active_Queue';
 
     // Set the primary key if it's not the default 'id'
-    protected $connection = 'db_connection';
 
     // Set the key type to string (UUID is typically a string in Laravel)
     protected $primaryKey = 'GUID';

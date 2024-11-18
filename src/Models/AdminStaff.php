@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class AdminStaff extends Model
 {
+    use CompanyDbConnection;
+
     public $incrementing = false;
 
     public $timestamps = false;
@@ -13,8 +16,6 @@ class AdminStaff extends Model
     protected $table = 'Admin_Staff';
 
     protected $primaryKey = 'Acc_ID';
-
-    protected $connection = 'db_connection';
 
     protected $fillable = [
         'Company_Dept_ID',

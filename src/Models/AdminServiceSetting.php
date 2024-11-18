@@ -1,18 +1,20 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class AdminServiceSetting extends Model
 {
+    use CompanyDbConnection;
+
     // Specify the table associated with the model
     public $timestamps = false;
 
     protected $table = 'Admin_Service_Settings';
 
     // If you want to allow mass assignment for these fields
-    protected $connection = 'db_connection';
 
     // If you have timestamps, enable this property
     protected $fillable = [

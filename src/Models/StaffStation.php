@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class StaffStation extends Model
 {
+    use CompanyDbConnection;
+
     public $timestamps = false;
 
     protected $table = 'Staff_Station';
@@ -21,5 +24,5 @@ class StaffStation extends Model
     ];
 
     // Specify the database connection if needed
-    protected $connection = 'db_connection'; // Disabling timestamps if not present in the table
+    // Disabling timestamps if not present in the table
 }

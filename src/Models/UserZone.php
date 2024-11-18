@@ -1,11 +1,14 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class UserZone extends Model
 {
+    use CompanyDbConnection;
+
     public $incrementing = false;
 
     public $timestamps = false; // Since there's no primary key
@@ -20,5 +23,5 @@ class UserZone extends Model
     ];
 
     // Specify the database connection if needed
-    protected $connection = 'db_connection'; // Disabling timestamps if not present in the table
+    // Disabling timestamps if not present in the table
 }

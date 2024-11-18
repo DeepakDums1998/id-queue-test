@@ -1,11 +1,12 @@
 <?php
 
-namespace DeepakDums1998\IdQueuePackagist\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;
 
+use DeepakDums1998\IdQueuePackagist\Traits\CompanyDbConnection;
 use Illuminate\Database\Eloquent\Model;
 
 class FCMToken extends Model
-{
+DeepakDums1998\IdQueuePackagist
     public $incrementing = false;
 
     public $timestamps = false;
@@ -14,7 +15,7 @@ class FCMToken extends Model
 
     protected $primaryKey = 'GUID';
 
-    protected $connection = 'db_connection';
+
 
     protected $fillable = [
         'GUID',

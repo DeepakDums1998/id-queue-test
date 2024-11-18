@@ -15,8 +15,6 @@ class ModelLister
 
     /**
      * Get a list of all Laravel Models.
-     *
-     * @return array
      */
     public function listModels(): array
     {

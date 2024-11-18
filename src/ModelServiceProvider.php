@@ -1,6 +1,7 @@
 <?php
 
 namespace DeepakDums1998\IdQueuePackagist;
+
 use DeepakDums1998\IdQueuePackagist\Commands\ExportModelsCommand;
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 {
     "name": "deepak-dums1998/id-queue-test",
-    "description": "List of all models used in id-queue",
+    "description": "List of all models used in ID Queue.",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -10,17 +10,18 @@
     },
     "authors": [
         {
-            "name": "id-queue"
+            "name": "Deepak Dums",
+            "email": "deepakdumraliya1998@gmail.com"
         }
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^8.0 || ^9.0"
+        "illuminate/support": "^8.0 || ^9.0 || ^10.0"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "IdQueue\\IdQueuePackage\\ModelServiceProvider"
+                "DeepakDums1998\\IdQueuePackagist\\ModelServiceProvider"
             ]
         }
     },

@@ -1,8 +1,6 @@
 <?php
 
 namespace DeepakDums1998\IdQueuePackagist;
-
-namespace DeepakDums1998\IdQueuePackagist\Commands;
 use DeepakDums1998\IdQueuePackagist\ModelLister;
 use Illuminate\Support\ServiceProvider;
 

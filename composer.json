@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DeepakDums1998\\IdQueuePackagist\\ModelServiceProvider"
+                "IdQueuePackagist\\ModelServiceProvider"
             ]
         }
     },

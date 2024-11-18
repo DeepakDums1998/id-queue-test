@@ -1,6 +1,6 @@
 <?php
 
-namespace IdQueue\IdQueuePackage\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 

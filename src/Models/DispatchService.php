@@ -1,6 +1,6 @@
 <?php
 
-namespace IdQueue\IdQueuePackage\Models;;
+namespace DeepakDums1998\IdQueuePackagist\Models;;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;

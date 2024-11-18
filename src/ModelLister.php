@@ -1,6 +1,6 @@
 <?php
 
-namespace IdQueue\IdQueuePackage;
+namespace DeepakDums1998\IdQueuePackagist;
 
 use Illuminate\Support\Facades\File;
 

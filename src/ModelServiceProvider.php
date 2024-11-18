@@ -1,9 +1,9 @@
 <?php
 
-namespace IdQueue\IdQueuePackage;
+namespace DeepakDums1998\IdQueuePackagist;
 
-namespace IdQueue\IdQueuePackage\Commands;
-use IdQueue\IdQueuePackage\ModelLister;
+namespace DeepakDums1998\IdQueuePackagist\Commands;
+use DeepakDums1998\IdQueuePackagist\ModelLister;
 use Illuminate\Support\ServiceProvider;
 
 class ModelServiceProvider extends ServiceProvider

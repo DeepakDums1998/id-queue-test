@@ -1,0 +1,29 @@
+{
+    "name": "DeepakDums1998/id-queue-test",
+    "description": "List of all models used in id-queue",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DeepakDums1998\\IdQueuePackagist\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "id-queue"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IdQueue\\IdQueuePackage\\ModelServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

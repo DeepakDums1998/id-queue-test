@@ -2,7 +2,7 @@
 
 namespace DeepakDums1998\IdQueuePackagist\Traits;
 
-trait CompanyDbConnection
+trait AdminDbConnection
 {
     protected $connection;
 
